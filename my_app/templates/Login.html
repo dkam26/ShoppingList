@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class ="bgimgLogin">
+<div class ="loginForm">
+<form method ="POST" action="" role="form">
+    <input type ="text" name="UserName" placeholder="User Name" required></br>
+    <input type ="password" name="LoginPassword" placeholder="Password" required></br>
+    <div class="loginButton"><input type="submit" value="Login" ><br/>
+    <a href="{{url_for('shoppinglist.signUp')}}">signup</a> 
+    </div> 
+</form>
+</div>
+</div>
+{% endblock %}
+ 
