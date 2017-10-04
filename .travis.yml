@@ -5,4 +5,4 @@ install:
  -pip install -r requirements.txt
  -pip install unittest2
 script:
- -pytest
+ -python Tests.py
