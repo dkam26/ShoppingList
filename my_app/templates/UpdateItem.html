@@ -1,0 +1,15 @@
+{% extends  'base.html'%}
+{% block body %}
+<div class="bgimgLogin">
+ <div class ="loginForm">
+{{name}}
+<form method ="POST" action="{{url_for('shoppinglist.updatingItem',shoppinglist_name=shoppinglist_name,name=name,Quantity=Quantity,Amountspent=Amountspent)}}">
+    <input type="text" name="Quantity" placeholder="Quantity" required></br>
+    <input type="number" name="AmountSpent" placeholder="AmountSpent" required></br>
+    <div class="loginButton"><input type="submit" value="Update" ></div>
+</form>
+
+</div>   
+
+</div>
+{% endblock%}

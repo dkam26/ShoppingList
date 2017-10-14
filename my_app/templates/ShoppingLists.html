@@ -1,0 +1,47 @@
+{% extends  'base.html'%}
+{% block body %}
+<div class="shoppinglist">
+            <div class="logoutlink">
+               <a href="">Logout</a>
+            </div>   
+ <center>
+    <img src="{{url_for('static', filename='shoppingHeader.png')}}"/><br/>
+    {% for p in shoppinglist %}
+    <div class="item">
+    {{p}}
+    <form method="POST" action="{{url_for('shoppinglist.Products')}}">
+        <input type="hidden" name="shoppinglist_name" value="{{p}}">
+    <input type="submit" value="Details">
+    </form><br>
+    <a href="{{url_for('shoppinglist.updateList',name=p )}}">Update List</a>
+    <a href="{{url_for('shoppinglist.deleteList',name=p )}}">Delete List</a>
+    </div>
+    
+    {% endfor %}
+        
+           
+  
+        
+   
+   </center>
+<table>
+    <tr>
+        <td>
+
+        </td>
+        <td>
+            
+        </td>
+        <td>
+            <div class="loginButton">
+                <form method ="GET" action="{{url_for('shoppinglist.addShoppinglist')}}">
+            <input type="submit" value="Add new list" >
+                </form>
+            </div> 
+        </td>
+    </tr>
+</table>
+   
+
+</div>
+{% endblock%}

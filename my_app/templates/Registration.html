@@ -2,7 +2,8 @@
 {% block body %}
 <div class= "bgimgRegisteration">
         <div class ="loginForm">
-<form method ="POST" action="">
+                
+<form method ="POST" action="{{url_for('shoppinglist.signUp')}}">
     <input type="text" name="FirstName" placeholder="First name" required><br/>
     <input type="text" name="SecondName" placeholder="Second name" required><br/>
     <input type="text" name="UserName" placeholder="Username" required><br/>

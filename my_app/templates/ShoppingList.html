@@ -1,0 +1,77 @@
+{% extends  'base.html'%}
+{% block body %}
+<div class="shoppinglist">
+            <div class="logoutlink">
+               <a href="">Logout</a><br/>
+               <a href="">Return to your lists</a>
+            </div>   
+ <center>
+    <img src="{{url_for('static', filename='shoppingHeader.png')}}"/><br/>
+    
+        
+            {% for i in p %}
+            <div class="item">
+            <table>
+                    <tr>
+                        <td>Product :</td>
+                       <td>{{i}}</td>
+                    </tr> 
+                    <tr>
+                        <td>Quantity:</td>
+                        <td>{{p[i][0]}}</td>
+                    </tr>
+                    <tr>
+                        <td>Amount Spent:</td>
+                        <td>{{p[i][1]}}</td>
+                    </tr>
+                    <tr>
+                        
+                            <div class="loginButton">
+                            <td>
+                                    <form method="POST" action="{{url_for('shoppinglist.deleteItem')}}">
+                                            <input type="hidden" name="name" value="{{i}}">
+                                            <input type="hidden" name="shoppinglistname" value="{{name}}">
+                                            <input type="submit" value="Delete Item">
+                                            </form>
+                           </td>
+                        <td>
+                                <form method="POST" action="{{url_for('shoppinglist.updateItem')}}">
+                                    <input type="hidden" name="name" value="{{i}}">
+                                    <input type="hidden" name="shoppinglistname" value="{{name}}">
+                                    <input type="hidden" name="Quantity" value="{{p[i][0]}}">
+                                    <input type="hidden" name="Amountspent" value="{{p[i][1]}}">
+                                    <input type="submit" value="Update Item">
+                                    </form>
+                            
+                        </td>
+                    </tr>
+            </table>
+            </div>
+            {% endfor %}
+           
+  
+        
+   
+   </center>
+<table>
+    <tr>
+        <td>
+
+        </td>
+        <td>
+            <div class="loginButton">
+                <form method ="POST" action="{{url_for('shoppinglist.addItem')}}">
+                        <input type="hidden" name="shoppinglist_name" value="{{name}}">     
+            <input type="submit" value="AddItem" >
+                </form>
+            </div>
+        </td>
+        <td>
+            
+        </td>
+    </tr>
+</table>
+   
+
+</div>
+{% endblock%}

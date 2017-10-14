@@ -34,4 +34,49 @@ div.bgimgRegisteration {
   border-width: 5px;
   border-color: pink; }
 
+div.shoppinglist {
+  background-color: pink;
+  margin-left: 400;
+  margin-right: 400;
+  height: 600;
+  border-style: solid;
+  border-width: 5px;
+  border-color: pink; }
+
+div.item {
+  background: url("/static/ProductImage.png");
+  margin-right: 400;
+  border-style: solid;
+  border-width: 5px;
+  border-color: pink;
+  background-size: 387px 124px;
+  width: 387;
+  height: 124; }
+
+div.addlist {
+  background-color: pink;
+  margin-left: 400;
+  margin-right: 400;
+  background: url("/static/addlist.jpg");
+  background-size: 400px 600px;
+  width: 400;
+  height: 600;
+  border-style: solid;
+  border-width: 5px;
+  border-color: pink; }
+  div.addlist div.shoppiglist {
+    background-color: pink;
+    margin-left: 400;
+    margin-right: 400;
+    background-size: 400px 600px;
+    width: 400;
+    height: 600;
+    border-style: solid;
+    border-width: 5px;
+    border-color: pink; }
+
+div.loginButton {
+  margin-left: 70px;
+  margin-right: 100px; }
+
 /*# sourceMappingURL=style.css.map */

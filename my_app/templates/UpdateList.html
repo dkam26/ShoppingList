@@ -1,0 +1,12 @@
+{% extends  'base.html'%}
+{% block body %}
+<div class= "addlist">
+    <div class ="loginForm">
+<form method="POST" action="{{url_for('shoppinglist.updateList',name=name)}}">
+    <input type="text" name="newname" placeholder="newname"></br>
+    <div class="loginButton">
+    <input type="submit" value="Rename">
+    </div>
+    </form>
+</div>
+    {% endblock%}

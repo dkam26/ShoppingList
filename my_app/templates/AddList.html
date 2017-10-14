@@ -1,0 +1,23 @@
+
+{% extends  'base.html'%}
+{% block body %}
+<div class= "addlist">
+    <div class ="loginForm">
+            <a href="{{url_for('shoppinglist.view')}}">Return lists</a><br>
+            
+            
+<form method ="POST" action="{{url_for('shoppinglist.addShoppinglist')}}">
+  
+        <input type="text" name="shoppinglistname" placeholder="shopping list name" required>
+    
+    <div class="loginButton">
+        <input type="submit" value="Create"><br/>
+        
+    </div>
+
+</form>
+
+</div>
+</div>
+
+{%endblock%}
