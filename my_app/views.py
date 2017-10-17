@@ -19,6 +19,7 @@ def login():
         if result == 'Success':
             return redirect(url_for('shoppinglist.view'))
         else:
+            flash("Wrong password or user")
             return redirect(url_for('shoppinglist.login'))
 
         
@@ -43,7 +44,7 @@ def view():
 def addShoppinglist():
     if request.method=='POST':
         name=request.form.get('shoppinglistname')
-        UserList.add(name)
+        UserList.add(str(name))
         return redirect(url_for('shoppinglist.view'))
     return render_template('AddList.html')
 @shoppinglist.route('/rename/<name>',methods=['POST','GET'])

@@ -3,6 +3,13 @@
 {% block body %}
 <div class ="bgimgLogin">
 <div class ="loginForm">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        {{message}}
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
            
 <form method ="POST" action="{{url_for('shoppinglist.login')}}" role="form">
     <input type ="text" name="UserName" placeholder="User Name" required></br>

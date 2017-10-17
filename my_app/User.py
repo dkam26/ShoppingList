@@ -8,10 +8,6 @@ class User:
             return 'Success'
         else:
             return 'Failed'
-    def logout(self):
-        pass
-    def EditInfo(self):
-        pass
-    def deleteAccount(self):
-        pass
+    
+    
     
