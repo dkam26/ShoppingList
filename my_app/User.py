@@ -1,5 +1,5 @@
 class User:
-    userInfo=dict()
+    userInfo={'username':None,'surname':None,'Firstname':None,'email':None,'Password':None}
     def signup(self,user,surname,Firstname,email,Password):
         self.userInfo={'username':user,'surname':surname,'Firstname':Firstname,'email':email,'Password':Password}
         return self.userInfo

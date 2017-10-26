@@ -2,8 +2,8 @@
 {% block body %}
 <div class="shoppinglist">
             <div class="logoutlink">
-               <a href="">Logout</a><br/>
-               <a href="">Return to your lists</a>
+               <a href="{{url_for('shoppinglist.logout')}}">Logout</a><br/>
+               <a href="{{url_for('shoppinglist.view')}}">Return to your lists</a>
             </div>   
  <center>
     <img src="{{url_for('static', filename='shoppingHeader.png')}}"/><br/>

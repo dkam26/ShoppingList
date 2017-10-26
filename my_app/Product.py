@@ -27,4 +27,5 @@ class Product:
     def deleteItem(self,shoppinglist_name,name):
         if shoppinglist_name in self.products:
             self.products[shoppinglist_name].pop(name)
+        
         return self.products

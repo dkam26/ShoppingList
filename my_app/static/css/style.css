@@ -45,7 +45,7 @@ div.shoppinglist {
 
 div.item {
   background: url("/static/ProductImage.png");
-  margin-right: 400;
+  margin-left: center;
   border-style: solid;
   border-width: 5px;
   border-color: pink;
@@ -74,6 +74,15 @@ div.addlist {
     border-style: solid;
     border-width: 5px;
     border-color: pink; }
+  div.addlist div.item {
+    background: url("/static/ProductImage.png");
+    margin-right: 400;
+    border-style: solid;
+    border-width: 5px;
+    border-color: pink;
+    background-size: 387px 124px;
+    width: 387;
+    height: 124; }
 
 div.loginButton {
   margin-left: 70px;

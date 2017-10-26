@@ -10,6 +10,9 @@ shoppinglist=Blueprint('shoppinglist',__name__)
 @shoppinglist.route('/')
 def home():
     return redirect(url_for('shoppinglist.login'))
+@shoppinglist.route('/logout')
+def logout():
+    return redirect(url_for('shoppinglist.login'))
 @shoppinglist.route('/login/',methods=['POST','GET'])
 def login():
     if request.method=='POST':
@@ -19,7 +22,7 @@ def login():
         if result == 'Success':
             return redirect(url_for('shoppinglist.view'))
         else:
-            flash("Wrong password or user")
+            flash("Wrong password or user name")
             return redirect(url_for('shoppinglist.login'))
 
         
@@ -115,5 +118,6 @@ def deleteItem():
     if request.method=='POST':
         shoppinglist_name=request.form.get('shoppinglistname')
         name=request.form.get('name')
-        p=product.deleteItem(shoppinglist_name,name)
+        sp=product.deleteItem(shoppinglist_name,name)
+        p=sp[shoppinglist_name]
         return render_template('ShoppingList.html',p=p,name=shoppinglist_name)
