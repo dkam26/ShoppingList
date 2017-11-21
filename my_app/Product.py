@@ -20,6 +20,7 @@ class Product:
         return self.products
     def deletelist(self,name):
         self.products.pop(name)
+        return self.products
     def updateItem(self,shoppinglist_name,name,newQuantity,newAmount):
         if shoppinglist_name in self.products:
             self.products[shoppinglist_name][name]=[newQuantity,newAmount]

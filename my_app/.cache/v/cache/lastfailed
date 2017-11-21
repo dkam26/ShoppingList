@@ -1,0 +1,5 @@
+{
+  "tests/test_list.py::ShoppingListTest::test_if_app_deletes_list": true, 
+  "tests/test_list.py::ShoppingListTest::test_if_app_deletes_shoppinglist_elements": true, 
+  "tests/test_list.py::ShoppingListTest::test_if_initial_dictionary_of_products": true
+}
